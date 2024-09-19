@@ -3,6 +3,11 @@ const Game = new Phaser.Game(1000,700 , Phaser.AUTO, '', {preload, create, updat
 let player, alien1, alien2, alien3, alien4, alien5, alien6, virus7, virus8, virus9, 
 virus10, cursors, fon, exp
 
+const upbtn = document.GetElementById('upbtn'),
+downbtn = document.GetElementById('downbtn'),
+leftbtn = document.GetElementById('leftbtn'),
+rightbtn = document.GetElementById('rightbtn')
+
 let p = 1, q = 1, r = 1, s = 1, t = 1, u = 1, v = 1
 
 function preload() {
