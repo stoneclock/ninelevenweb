@@ -3,11 +3,6 @@ const Game = new Phaser.Game(1000,700 , Phaser.AUTO, '', {preload, create, updat
 let player, alien1, alien2, alien3, alien4, alien5, alien6, virus7, virus8, virus9, 
 virus10, cursors, fon, exp
 
-let upbtn = document.GetElementById('upbtn'),
-downbtn = document.GetElementById('downbtn'),
-leftbtn = document.GetElementById('leftbtn'),
-rightbtn = document.GetElementById('rightbtn')
-
 let p = 1, q = 1, r = 1, s = 1, t = 1, u = 1, v = 1
 
 function preload() {
@@ -56,18 +51,18 @@ cursors = Game.input.keyboard.createCursorKeys()
 }
 
 function update() {
-    if (cursors.right.isDown || rightbtn.onclick) {
+    if (cursors.right.isDown) {
         if(player.x<=fon.width-player.width/2)
         player.x += 12
         player.scale.setTo(0.3,0.3)
-    } else if (cursors.left.isDown || leftbtn.onclick) {
+    } else if (cursors.left.isDown) {
         player.x -= 12
         player.scale.setTo(-0.3,0.3)
     }
 
-    if (cursors.up.isDown || upbtn.onclick) {
+    if (cursors.up.isDown) {
         player.y -= 12
-    } else if (cursors.down.isDown || downbtn.onclick) {
+    } else if (cursors.down.isDown) {
         player.y += 12
     }
 
